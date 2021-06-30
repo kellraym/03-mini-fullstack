@@ -19,7 +19,7 @@ const Navbar = () => {
                             </li>
 
                             <li className="nav-item active">
-                            <Link to="/cheatsheet" className="nav-link">Cheatsheet</Link>
+                            <Link to="/inputcheats" className="nav-link">Input Cheats</Link>
                             </li>
 
                             <li className="nav-item active">

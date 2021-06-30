@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Cheatsheet from './Components/Cheatsheet';
+import InputForm from './Components/InputForm';
 
 import './styling/App.css';
 import Home from './Components/Home'
@@ -24,7 +24,7 @@ function App() {
                   {/* Main content*/}
                   <div className="main-container">
                       <Route exact path="/" component={Home} />
-                      <Route exact path="/cheatsheet" component={Cheatsheet} />
+                      <Route exact path="/inputcheats" component={InputForm} />
                   </div>
               </div>
             </div>

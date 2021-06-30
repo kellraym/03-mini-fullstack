@@ -22,7 +22,29 @@ Create a coding cheatsheet hub
 - [X] write inputs to local storage (data.json)
 - [X] send json data to '/'
 - [X] GET data from '/' to display
-- [ ] replace local storage .json file with database using knex
+- [X] replace local storage .json file with database using knex
+
+#### App Layout
+- Home Page
+  - Navbar
+    - Links to input sheet
+    - links to category
+  - Search Function
+    - Category (dropdown)
+  - Display Cheats based on category
+    - delete input option
+
+- Cheatsheet -> Input Cheat
+  - Input fields
+    - Title
+    - Description
+    - Category
+      - dropdown with a list of exisiting
+      - add button and input to add a new category to the list
+
+- Some Category Page
+  - All input titles in that category
+    - click to display details
 
 ### Stretch goals
 - [ ] Add a dropdown selecter

@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 
-function Cheatsheet () {
+function InputForm () {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [inputs, setInputs] = useState({})
@@ -21,7 +21,7 @@ function Cheatsheet () {
 
 useEffect(() => {
   function postInputs() {
-    fetch('http://localhost:3001/cheatsheet', {
+    fetch('http://localhost:3001/inputcheats', {
       method: 'POST',
       body: JSON.stringify(inputs),
       headers: {
@@ -54,5 +54,5 @@ useEffect(() => {
     )
   }
 
-  export default Cheatsheet;
+  export default InputForm;
 

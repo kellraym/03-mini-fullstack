@@ -11,8 +11,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
-
 app.get('/', function(req, res) {
   knex
     .select('*')
@@ -24,18 +22,24 @@ app.get('/', function(req, res) {
           'The data you are looking for could not be found. Please try again'
       })
     );
+    console.log("GET working")
 });
 
+app.post('/inputcheats', (req, res) => {
+  console.log(`POST working`)
+  // const fakeInput = {name: 'fake2', description:'fake descrip2'}
+  console.log("The bod: ", req.body)
 
-
-
-
-
-
-
-
-
-
+// INSERT INTO user_inputs (name, description) VALUES (name, description)
+    knex('user_inputs')
+    .insert(req.body)
+    .then(data => res.status(200).json(data))
+    .catch(err => {
+      res.status(404).json({
+        message: `error`
+      })
+    })
+})
 
 // GETTING DATA USING LOCAL STORAGE
 // app.get('/', (req, res) => {
@@ -49,27 +53,28 @@ app.get('/', function(req, res) {
 //   })
 // })
 
+// POST req for storing data via local json file
 
-app.post('/cheatsheet', (req, res) => {
-  if(!req.body.name || !req.body.description) {
-  res.status(404).send('Try Again!')
-  } else {
-    fs.readFile(locallyStoredInputs, 'utf8', (err, data) => {
-      if (err) {
-        throw(err)
-      } else {
-        const currentList =JSON.parse(data)
-        const inputs = req.body
-        currentList.push(inputs)
+// app.post('/inputcheats', (req, res) => {
+//   if(!req.body.name || !req.body.description) {
+//   res.status(404).send('Try Again!')
+//   } else {
+//     fs.readFile(locallyStoredInputs, 'utf8', (err, data) => {
+//       if (err) {
+//         throw(err)
+//       } else {
+//         const currentList =JSON.parse(data)
+//         const inputs = req.body
+//         currentList.push(inputs)
 
-        fs.writeFile(locallyStoredInputs, JSON.stringify(currentList, null, 4) ,(err) => {
-          if (err) console.log(err)
-        })
-      }
-      res.end()
-    })
-  }
-})
+//         fs.writeFile(locallyStoredInputs, JSON.stringify(currentList, null, 4) ,(err) => {
+//           if (err) console.log(err)
+//         })
+//       }
+//       res.end()
+//     })
+//   }
+// })
 
 
 app.listen(port, () => console.log(`Listening on localhost:${port}`))

@@ -17,7 +17,8 @@ Create a coding cheatsheet hub
 ### Initial Must Dos
 - [X] Inputs into a field
 - [X] Push Inputs into a list
-- [ ] Post inputs to server using Express
+- [X] Post inputs to server using Express
+    - [X] on submit, POST to server with a fetch()
 - [ ] write inputs to local storage (data.json)
 - [ ] replace local storage .json file with database using knex
 

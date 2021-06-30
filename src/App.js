@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
+function Home () {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+      <div className="container-fluid page"> <div className="row">
+          <div className = "page-header"><h2>Home Page</h2></div>
+          <div className="contatiner-fluid d-flex flex-wrap mini-module">
+            <div className="text"> <h1>Input Stuff:</h1>
+                <form>
+                  <div class="form-group row"><label>Input 1:</label><input class='form-field' type='text' placeholder='input 1' value=''/></div>
+                  <div class="form-group row"><label>Input 2:</label><input class='form-field' type='text' placeholder='input 2' value=''/></div>
+                  <input type="submit" value="Submit" className="btn btn-primary mb-2"/>
+                </form>
+            </div>
+          </div>
+        </div></div>
 
-export default App;
+    )
+  }
+
+  export default Home;
+

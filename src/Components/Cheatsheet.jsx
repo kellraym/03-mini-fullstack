@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react';
 function Cheatsheet () {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
-  const [list, setList] = useState({})
+  const [inputs, setInputs] = useState({})
 
   function handleNameInput(e) {
     setName(e.target.value)
@@ -16,27 +16,26 @@ function Cheatsheet () {
   }
 
   function handleSubmit() {
-    setList({name: name, description: description})
+    setInputs({name: name, description: description})
     setName('')
     setDescription('')
   }
 
 useEffect(() => {
-  function doThing() {
+  function postInputs() {
     fetch('http://localhost:3001/cheatsheet', {
       method: 'POST',
-      body: JSON.stringify(list),
+      body: JSON.stringify(inputs),
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       }
     })
   }
-doThing()
-// console.log("name: ", name)
-// console.log("description: ", description)
-// console.log("list: ", list)
-}, [list])
+  if(inputs.name !== undefined) {
+    postInputs()
+  }
+}, [inputs])
 
   return (
       <div className="container-fluid page"> <div className="row">

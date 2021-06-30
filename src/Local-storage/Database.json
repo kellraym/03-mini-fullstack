@@ -1,42 +1,14 @@
 [
     {
-        "name": "asdfasdf",
-        "description": "dfdffdfddf"
+        "name": "Name 1",
+        "description": "Description 1"
     },
     {
-        "name": "asdfasdf",
-        "description": "dfdffdfddf"
+        "name": "Name 2",
+        "description": "Description 2"
     },
     {
-        "name": "dfg",
-        "description": "dzfg"
-    },
-    {
-        "name": "fgfg",
-        "description": "fgfg"
-    },
-    {
-        "name": "sdf",
-        "description": "sdf"
-    },
-    {
-        "name": "sdf",
-        "description": "sdf"
-    },
-    {
-        "name": "fasdfsdf",
-        "description": "asdfasdf"
-    },
-    {
-        "name": "asdf",
-        "description": "asdf"
-    },
-    {
-        "name": "sdf",
-        "description": "sdf"
-    },
-    {
-        "name": "asd",
-        "description": "asD"
+        "name": "Name 3",
+        "description": "Description 3"
     }
 ]

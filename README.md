@@ -19,10 +19,16 @@ Create a coding cheatsheet hub
 - [X] Push Inputs into a list
 - [X] Post inputs to server using Express
     - [X] on submit, POST to server with a fetch()
-- [ ] write inputs to local storage (data.json)
+- [X] write inputs to local storage (data.json)
+- [X] send json data to '/'
+- [X] GET data from '/' to display
 - [ ] replace local storage .json file with database using knex
 
 ### Stretch goals
 - [ ] Add a dropdown selecter
 - [ ] Use drop down to organize inputs into containers
 - [ ] Seperate data into seperate pages OR a search function# 03-mini-fullstack
+
+
+#### Styling Points
+- [ ] Click on name to display description

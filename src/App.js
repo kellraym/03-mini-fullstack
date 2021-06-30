@@ -4,7 +4,7 @@ import Cheatsheet from './Components/Cheatsheet';
 
 import './styling/App.css';
 import Home from './Components/Home'
-//import Navbar from './Components/Navbar'
+import Navbar from './Components/Navbar'
 
 
 
@@ -14,7 +14,7 @@ function App() {
     <Switch>
         <div className="App">
 
-            {/* <header> <Navbar/> </header> */}
+            <header> <Navbar/> </header>
 
 
             {/* Body */}

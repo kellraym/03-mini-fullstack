@@ -10,6 +10,18 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.get('/', (req, res) => {
+  fs.readFile(locallyStoredInputs, 'utf8', (err, data) => {
+    if (err) {
+      throw(err)
+    } else {
+      const currentList =JSON.parse(data)
+  res.status(201).send(currentList)
+    }
+  })
+})
+
+
 app.post('/cheatsheet', (req, res) => {
   if(!req.body.name || !req.body.description) {
   res.status(404).send('Try Again!')
@@ -26,6 +38,7 @@ app.post('/cheatsheet', (req, res) => {
           if (err) console.log(err)
         })
       }
+      res.end()
     })
   }
 })

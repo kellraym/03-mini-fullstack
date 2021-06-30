@@ -7,12 +7,10 @@ function Cheatsheet () {
 
   function handleNameInput(e) {
     setName(e.target.value)
-
   }
 
   function handleDescInput(e) {
     setDescription(e.target.value)
-
   }
 
   function handleSubmit() {

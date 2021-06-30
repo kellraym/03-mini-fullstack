@@ -15,7 +15,8 @@ This application should have:
 Create a coding cheatsheet hub
 
 ### Initial Must Dos
-- [ ] Inputs into a field
+- [X] Inputs into a field
+- [X] Push Inputs into a list
 - [ ] Post inputs to server using Express
 - [ ] write inputs to local storage (data.json)
 - [ ] replace local storage .json file with database using knex

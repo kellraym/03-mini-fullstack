@@ -1,23 +1,37 @@
-import React from 'react';
+import React from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Cheatsheet from './Components/Cheatsheet';
 
-function Home () {
+import './styling/App.css';
+import Home from './Components/Home'
+//import Navbar from './Components/Navbar'
 
+
+
+function App() {
   return (
-      <div className="container-fluid page"> <div className="row">
-          <div className = "page-header"><h2>Home Page</h2></div>
-          <div className="contatiner-fluid d-flex flex-wrap mini-module">
-            <div className="text"> <h1>Input Stuff:</h1>
-                <form>
-                  <div class="form-group row"><label>Input 1:</label><input class='form-field' type='text' placeholder='input 1' value=''/></div>
-                  <div class="form-group row"><label>Input 2:</label><input class='form-field' type='text' placeholder='input 2' value=''/></div>
-                  <input type="submit" value="Submit" className="btn btn-primary mb-2"/>
-                </form>
+    <Router>
+    <Switch>
+        <div className="App">
+
+            {/* <header> <Navbar/> </header> */}
+
+
+            {/* Body */}
+            <div className="container-fluid body">
+              <div className="row content">
+
+                  {/* Main content*/}
+                  <div className="main-container">
+                      <Route exact path="/" component={Home} />
+                      <Route exact path="/cheatsheet" component={Cheatsheet} />
+                  </div>
+              </div>
             </div>
-          </div>
-        </div></div>
+        </div>
+    </Switch>
+  </Router>
+  );
+}
 
-    )
-  }
-
-  export default Home;
-
+export default App;

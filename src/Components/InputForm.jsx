@@ -42,15 +42,50 @@ useEffect(() => {
 
   return (
       <div>
+        <div class="form-holder row">
+            <h1>Enter a CHEET:</h1>
+              <form>
 
-      <h1>Cheatsheet</h1>
+                <input class="form-control" onChange={handleNameInput} type='text' placeholder='Cheat Title...' value={name}/>
 
-       <h2>Input Stuff:</h2>
-          <form>
-            <div><label>Name:</label><input onChange={handleNameInput} type='text' placeholder='name...' value={name}/></div>
-            <div><label>Description:</label><input onChange={handleDescInput} type='text' placeholder='description...' value={description}/></div>
-            <input type="button" value="Submit" onClick={handleSubmit}/>
-          </form>
+                <input class="form-control mt-3" onChange={handleDescInput} type='text' placeholder='Description...' value={description}/>
+
+                <select className="form-select mt-3">
+                      <option selected disabled value="">Category</option>
+                      <option value="react">React</option>
+                      <option value="git">Git</option>
+                      <option value="javascript">JavaScript</option>
+                      <option value="html">HTML</option>
+                      <option value="styling">Styling</option>
+                      <option value="sql">SQL</option>
+                </select>
+
+                <div className="col-md-12 mt-3">
+                      <input type="radio" className="btn-check" name="category" id="react"/>
+                      <label className="btn btn react" aria-pressed="true" for="react">react</label>
+
+                      <input type="radio" className="btn-check" name="category" id="git"/>
+                      <label className="btn btn-light git" for="git">git</label>
+
+                      <input type="radio" className="btn-check" name="category" id="javascript"/>
+                      <label className="btn btn-light javascript" for="javascript">javascript</label>
+
+                      <input type="radio" className="btn-check" name="category" id="html"/>
+                      <label className="btn btn-light html" aria-pressed="true" for="html">html</label>
+
+                      <input type="radio" className="btn-check" name="category" id="styling"/>
+                      <label className="btn btn-light styling" for="styling">styling</label>
+
+                      <input type="radio" className="btn-check" name="category" id="sql"/>
+                      <label className="btn btn-light sql" for="sql">sql</label>
+
+                      <input type="radio" className="btn-check" name="category" id="other"/>
+                      <label className="btn btn-light other" for="other">other</label>
+                  </div>
+
+                <input type="button" value="Submit" onClick={handleSubmit} class="btn btn-dark mt-3"/>
+              </form>
+            </div>
       </div>
     )
   }

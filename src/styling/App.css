@@ -1,0 +1,56 @@
+.cheat-card{
+  opacity: 0.4;
+  font-size: 5vw;
+}
+
+.card {
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px 5px black;
+}
+
+
+
+.form-holder {
+      display: flex;
+      justify-content: center;
+      text-rendering: optimizeLegibility;
+}
+
+.btn.react{
+  background-color: #125D98;
+  color: #fff;
+}
+
+.btn.git{
+  background-color: #52006A;
+  color: #fff;
+
+}
+.btn.javascript{
+  background-color: rgb(255, 169, 0);
+  color: #fff;
+
+}
+.btn.html{
+  background-color: rgb(255, 118, 0);
+  color: #fff;
+
+}
+.btn.styling{
+  background-color: #F21170;
+  color: #fff;
+
+}
+.btn.sql{
+  background-color: #CD113B;
+  color: #fff;
+
+}
+.btn.other{
+  background-color: #7952B3;
+  color: #fff;
+
+}
+
+
+

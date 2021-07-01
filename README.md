@@ -27,18 +27,18 @@ Create a coding cheatsheet hub
 #### App Layout
 - Home Page
   - Navbar
-    - Links to input sheet
+    - [X] Links to input sheet
     - links to category
   - Search Function
-    - Category (dropdown)
+    - [X] Category (dropdown)
   - Display Cheats based on category
     - delete input option
 
-- Cheatsheet -> Input Cheat
-  - Input fields
-    - Title
-    - Description
-    - Category
+- [X] Cheatsheet -> Input Cheat
+  - [X] Input fields
+    - [X] Title
+    - [X] Description
+    - [X] Category
       - dropdown with a list of exisiting
       - add button and input to add a new category to the list
 
@@ -47,9 +47,9 @@ Create a coding cheatsheet hub
     - click to display details
 
 ### Stretch goals
-- [ ] Add a dropdown selecter
+- [X] Add a dropdown selecter
 - [ ] Use drop down to organize inputs into containers
-- [ ] Seperate data into seperate pages OR a search function# 03-mini-fullstack
+- [ ] Seperate data into seperate pages OR a search function
 
 
 #### Styling Points

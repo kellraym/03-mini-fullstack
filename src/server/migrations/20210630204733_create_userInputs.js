@@ -4,6 +4,7 @@ exports.up = function(knex) {
     table.increments('id');
     table.string('name').notNullable();
     table.string('description').notNullable();
+    table.string('category').notNullable();
   })
 };
 

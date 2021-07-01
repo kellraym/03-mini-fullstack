@@ -11,7 +11,7 @@ import Navbar from './Components/Navbar'
 function App() {
   return (
     <Router>
-    <Switch>
+    < Switch>
         <div className="App">
 
             <header> <Navbar/> </header>
@@ -35,3 +35,4 @@ function App() {
 }
 
 export default App;
+

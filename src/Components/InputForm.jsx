@@ -3,6 +3,7 @@ import {useState, useEffect} from 'react';
 function InputForm () {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
+  const [category, setCategory] = useState('');
   const [inputs, setInputs] = useState({})
 
   function handleNameInput(e) {
@@ -13,8 +14,12 @@ function InputForm () {
     setDescription(e.target.value)
   }
 
+  function handleCatInput(e) {
+    setCategory(e.target.value)
+  }
+
   function handleSubmit() {
-    setInputs({name: name, description: description})
+    setInputs({name: name, description: description, category: category})
     setName('')
     setDescription('')
   }
@@ -36,21 +41,17 @@ useEffect(() => {
 }, [inputs])
 
   return (
-      <div className="container-fluid page"> <div className="row">
-          <div className = "page-header"><h2>Cheatsheet</h2></div>
-          <div className="contatiner-fluid d-flex flex-wrap mini-module">
-            <div className="text"> <h1>Input Stuff:</h1>
-                <form>
-                  <div className="form-group row"><label>Name:</label>
-                      <input className='form-field' onChange={handleNameInput} type='text' placeholder='name...' value={name}/></div>
-                  <div className="form-group row"><label>Description:</label>
-                      <input className='form-field' onChange={handleDescInput} type='text' placeholder='description...' value={description}/></div>
-                  <input type="button" value="Submit" onClick={handleSubmit} className="btn btn-primary mb-2"/>
-                </form>
-            </div>
-          </div>
-        </div></div>
+      <div>
 
+      <h1>Cheatsheet</h1>
+
+       <h2>Input Stuff:</h2>
+          <form>
+            <div><label>Name:</label><input onChange={handleNameInput} type='text' placeholder='name...' value={name}/></div>
+            <div><label>Description:</label><input onChange={handleDescInput} type='text' placeholder='description...' value={description}/></div>
+            <input type="button" value="Submit" onClick={handleSubmit}/>
+          </form>
+      </div>
     )
   }
 
